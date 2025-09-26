@@ -1,0 +1,17 @@
+[project]
+name = "pydata-norwich-sep-2025"
+version = "0.1.0"
+description = "Talk for Pydata Norwich Sep 2025"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pre-commit",
+    "ruff",
+]
+
+features = [
+    "polars",
+]

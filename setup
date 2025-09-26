@@ -1,0 +1,5 @@
+uv init --python 3.12
+uv venv --clear
+uv add ruff --dev
+uv add pre-commit --dev
+uv run pre-commit install
