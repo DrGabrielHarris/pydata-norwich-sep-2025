@@ -8,7 +8,7 @@ dependencies = []
 
 [dependency-groups]
 dev = [
-    "ruff",
+    "ruff", 
     "pre-commit",
 ]
 
@@ -23,6 +23,11 @@ inference = [
 [tool.ruff]
 line-length = 88
 indent-width = 4
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = false
 
 [tool.ruff.lint]
 select = ["E", "F", "D", "I"]
@@ -40,8 +45,3 @@ ignore = [
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
-
-[tool.ruff.format]
-quote-style = "double"
-indent-style = "space"
-docstring-code-format = false
