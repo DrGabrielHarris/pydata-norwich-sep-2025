@@ -7,18 +7,11 @@ requires-python = ">=3.12"
 dependencies = []
 
 [dependency-groups]
-dev = [
-    "ruff", 
-    "pre-commit",
-]
 
-features = [
-    "polars",
-]
-
-inference = [
-    "pydantic>=2.0",
-]
+dev = ["ruff", "pre-commit"]
+features = ["polars", "seaborn"]
+training = ["spacy>=3"]
+inference = ["pydantic>=2"]
 
 [tool.ruff]
 line-length = 88
