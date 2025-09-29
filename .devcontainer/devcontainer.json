@@ -1,0 +1,39 @@
+{
+    "name": "Python 3",
+    "image": "mcr.microsoft.com/devcontainers/python:3.12",
+    "features": {"ghcr.io/astral-sh/uv:latest": {}},
+    "postCreateCommand": "chmod u+x ./setup && ./setup",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "files.autoSave": "afterDelay",
+                "files.autoSaveDelay": 5000,
+                "editor.wordWrap": "on",
+                "editor.rulers": [
+                    88
+                ],
+                "ruff.nativeServer": "on",
+                "[python]": {
+                    "editor.formatOnSave": true,
+                    "editor.codeActionsOnSave": {
+                        "source.fixAll": "explicit",
+                        "source.organizeImports.ruff": "explicit"
+                    },
+                    "editor.defaultFormatter": "charliermarsh.ruff"
+                },
+                "notebook.formatOnSave.enabled": true,
+                "notebook.codeActionsOnSave": {
+                    "notebook.source.fixAll": "explicit",
+                    "notebook.source.organizeImports": "explicit"
+                },
+                "jupyter.notebookFileRoot": "${workspaceFolder}}"
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.jupyter",
+                "charliermarsh.ruff"
+            ]
+        }
+    }
+}

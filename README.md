@@ -1,4 +1,4 @@
 # Initial Setup
 
-* Make the `setup` script executable `chmod u+x script`
+* Make the `setup` script executable `chmod u+x setup`
 * Run `setup` script in your CLI
