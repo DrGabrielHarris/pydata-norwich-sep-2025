@@ -2,3 +2,4 @@ uv init --python 3.12
 uv venv --clear
 uv run pre-commit install
 uv run pre-commit autoupdate
+uv run pre-commit run --all-files
