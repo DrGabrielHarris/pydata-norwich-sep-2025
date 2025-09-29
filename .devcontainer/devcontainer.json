@@ -1,7 +1,9 @@
 {
     "name": "Python 3",
     "image": "mcr.microsoft.com/devcontainers/python:3.12",
-    "features": {"ghcr.io/astral-sh/uv:latest": {}},
+    "features": {
+        "ghcr.io/jsburckhardt/devcontainer-features/uv:1": {}
+    },
     "postCreateCommand": "chmod u+x ./setup && ./setup",
     "customizations": {
         "vscode": {
