@@ -21,3 +21,13 @@ hooks = [
   { id = "check-toml" },
   { id = "check-json" }
 ]
+
+[[repos]]
+repo = "https://github.com/astral-sh/uv-pre-commit"
+rev = "0.9.13"
+hooks = [
+  { id = "uv-sync" },
+  { id = "uv-lock" },
+  { id = "uv-export", args = ["--all-groups", "--no-hashes", "--no-annotate", "--output-file", "requirements.txt"], files = "requirements.txt" },
+  { id = "uv-export", args = ["--only-group", "inference", "--no-hashes", "--no-annotate", "--output-file", "requirements_inference.txt"], files = "requirements_inference.txt" }
+]
