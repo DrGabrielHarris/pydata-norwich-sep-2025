@@ -1,6 +1,6 @@
 set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
 
-@setup: venv-setup pre-commit-setup requirements-setup
+@setup: venv-setup prek-setup requirements-setup
     echo "Setting up..."
 
 @venv-setup:
@@ -17,7 +17,7 @@ set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
 
 @requirements-setup:
     uv export --all-groups --no-hashes  --no-annotate --output-file requirements.txt
-    uv export --only-group inference --no-hashes --no-annotate --output-file mlops/environment/requirements_inference.txt
+    uv export --only-group inference --no-hashes --no-annotate --output-file requirements_inference.txt
 
 @lint:
     uv run ruff format .
