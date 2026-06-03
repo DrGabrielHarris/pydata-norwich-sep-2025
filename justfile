@@ -1,15 +1,12 @@
 set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
 
-@setup: venv-setup prek-setup requirements-setup
+@setup: sync prek-setup
     echo "Setting up..."
 
-@venv-setup:
-    uv venv --clear
+@sync:
     uv sync --all-groups
-
-@pre-commit-setup:
-    uv run pre-commit install
-    uv run pre-commit autoupdate
+    uv export --all-groups --no-hashes  --no-annotate --output-file requirements.txt
+    uv export --only-group inference --no-hashes --no-annotate --output-file requirements_inference.txt
 
 @prek-setup:
     uv run prek install -f
@@ -17,10 +14,6 @@ set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
 
 @prek:
     uv run prek run
-
-@requirements-setup:
-    uv export --all-groups --no-hashes  --no-annotate --output-file requirements.txt
-    uv export --only-group inference --no-hashes --no-annotate --output-file requirements_inference.txt
 
 @lint:
     uv run ruff format .
