@@ -10,12 +10,13 @@ dependencies = []
 
 dev = ["ruff", "pre-commit"]
 features = ["polars", "seaborn"]
-training = ["spacy>=3"]
+training = ["openai"]
 inference = ["pydantic>=2"]
 
 [tool.ruff]
 line-length = 88
 indent-width = 4
+extend-include = ["*.ipynb"]
 
 [tool.ruff.format]
 quote-style = "double"
