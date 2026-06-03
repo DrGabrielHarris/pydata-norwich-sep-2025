@@ -13,7 +13,7 @@ set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
     uv run prek auto-update
 
 @prek:
-    uv run prek run
+    uv run prek run --all-files
 
 @ruff:
     uv run ruff format .
