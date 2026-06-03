@@ -15,6 +15,6 @@ set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
 @prek:
     uv run prek run
 
-@lint:
+@ruff:
     uv run ruff format .
     uv run ruff check . --fix
