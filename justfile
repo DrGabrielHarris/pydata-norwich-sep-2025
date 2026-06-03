@@ -13,7 +13,10 @@ set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
 
 @prek-setup:
     uv run prek install -f
-    uv run prek autoupdate
+    uv run prek auto-update
+
+@prek:
+    uv run prek run
 
 @requirements-setup:
     uv export --all-groups --no-hashes  --no-annotate --output-file requirements.txt
