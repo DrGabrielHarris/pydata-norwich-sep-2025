@@ -1,4 +1,6 @@
 ---
+name: 'Commits Conventions'
+description: 'Conventions for commit messages'
 applyTo: '**'
 ---
 

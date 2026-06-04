@@ -1,8 +1,10 @@
 ---
-applyTo: '**'
+name: 'Python Coding Standards'
+description: 'Coding standards for Python files'
+applyTo: '**/*.py'
 ---
 
-# Project coding standards
+# Python Coding Standards
 
 ## Python Guidelines
 
@@ -12,21 +14,22 @@ applyTo: '**'
 
 ## Naming Conventions
 
-- Use the Google Style Guide
+- Use PascalCase for component names, interfaces, and type aliases.
+- Use camelCase for variables, functions, and methods.
+- Use ALL_CAPS for constants.
 - Function name is based on what the function does. Use imperative naming with max 4 words long.
 - Variable names should be verbose. Use more words than needed with max 4 words long.
 
 ## Style Guide
 
-- Use PEP8 convention for code.
+- Follow the PEP 8 style guide.
 - Use double quotation marks for strings.
-- Use typing hints to function arguments and returns.
+- Use type hints for all function signatures.
 - Separate function arguments on individual lines.
 
 ## Docstring Guide
 
 - Use Google convention for docstring formatting.
-- Use Google convention for Docstring.
 - Capitalise descriptions.
 - End the description line with a period.
 
