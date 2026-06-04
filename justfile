@@ -4,7 +4,7 @@ set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
     echo "Setting up the project by syncing dependencies and installing pre-commit hooks..."
 
 @uv-sync:
-    echo "Syncing all dependency groups using uv and exporting requirements files..."
+    echo "Syncing all dependencies using uv and exporting requirements files..."
     uv sync --all-groups
     uv export --all-groups --no-hashes  --no-annotate --output-file requirements.txt
     uv export --only-group inference --no-hashes --no-annotate --output-file requirements_inference.txt
